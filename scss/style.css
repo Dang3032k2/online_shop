@@ -7,9 +7,13 @@
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .main {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: unset;
   justify-content: center;
@@ -18,16 +22,15 @@
 }
 
 .grid {
+  width: 65%;
+  margin: 6%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 5%;
-  width: 65%;
-  height: 80%;
 }
 .grid__item {
   background-color: #ffffff;
   position: relative;
-  height: 100%;
 }
 .grid__item::before {
   content: "NEW";
@@ -87,11 +90,10 @@
 }
 .grid__item-info {
   text-align: center;
-  height: 100%;
 }
 .grid__item-place {
   width: 100%;
-  height: 38%;
+  height: 230px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,10 +134,9 @@
   color: #5f7280;
   font-size: unset;
   font-weight: 300;
-  height: 45%;
 }
 .grid__item-title-container {
-  height: 24%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,13 +147,13 @@
   padding-bottom: 5px;
 }
 .grid__item-btn {
-  height: 17%;
   display: flex;
   flex-direction: unset;
   justify-content: center;
   align-items: center;
+  padding: 40px 0;
 }
-.grid__item-ocean-btn {
+.grid__item-btn--ocean {
   padding: 10px 20px;
   height: 40px;
   font-size: 16px;
@@ -163,11 +164,11 @@
   cursor: pointer;
   transition: all 0.5s ease;
 }
-.grid__item-ocean-btn:hover {
+.grid__item-btn--ocean:hover {
   color: #ffffff;
   background-color: #2195f7;
 }
-.grid__item-mountain-btn {
+.grid__item-btn--mountain {
   padding: 10px 20px;
   height: 40px;
   font-size: 16px;
@@ -178,11 +179,11 @@
   cursor: pointer;
   transition: all 0.5s ease;
 }
-.grid__item-mountain-btn:hover {
+.grid__item-btn--mountain:hover {
   color: #ffffff;
   background-color: #6c136f;
 }
-.grid__item-forest-btn {
+.grid__item-btn--forest {
   padding: 10px 20px;
   height: 40px;
   font-size: 16px;
@@ -193,7 +194,7 @@
   cursor: pointer;
   transition: all 0.5s ease;
 }
-.grid__item-forest-btn:hover {
+.grid__item-btn--forest:hover {
   color: #ffffff;
   background-color: #31ad1d;
 }
@@ -201,14 +202,10 @@
 .place-inf {
   list-style-type: none;
   font-size: 13px;
-  height: 76%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: unset;
-}
-.place-inf :nth-child(odd) {
-  background-color: #f4f6f7;
 }
 .place-inf__detail {
   flex: 1;
@@ -216,19 +213,22 @@
   flex-direction: unset;
   justify-content: center;
   align-items: center;
+  padding: 12px;
+}
+.place-inf__detail:nth-child(odd) {
+  background-color: #f4f6f7;
 }
 
-@media screen and (min-width: 375px) and (max-width: 1440px) {
+@media screen and (max-width: 767px) {
   .main {
     overflow-y: scroll;
-    height: unset;
   }
   .grid {
     width: 100%;
-    height: 80%;
     grid-template-columns: unset;
     grid-template-rows: auto;
     row-gap: 3%;
+    margin: 0;
   }
   .grid__item::before {
     transform: translate(0%, 20%);
@@ -251,9 +251,6 @@
   .grid__place-desc {
     font-size: 40px;
   }
-  .grid__item-info {
-    height: 94vh;
-  }
   .grid__item-title {
     font-size: 20px;
   }
@@ -262,6 +259,14 @@
   }
   .place-inf {
     font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1410px) {
+  .grid {
+    width: 86%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin: 10% 0;
   }
 }
 

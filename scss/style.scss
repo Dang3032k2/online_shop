@@ -3,19 +3,19 @@
 @import "mixin";
 
 .main {
-  @include size(100%, 100vh);
+  width: 100%;
   @include flex(unset, center, center);
   background-color: $lightCyan;
 }
 .grid {
+  width: 65%;
+  margin: 6%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 5%;
-  @include size(65%, 80%);
   &__item {
     background-color: $white;
     position: relative;
-    height: 100%;
     &::before {
       content: "NEW";
       @include size(60px, 60px);
@@ -49,37 +49,38 @@
   &__price-value {
     font-size: 22px;
     margin-bottom: 6px;
+    &--ocean {
+      color: $blue;
+    }
+    &--mountain {
+      color: $darkPink;
+    }
+    &--forest {
+      color: $green;
+    }
   }
-  &__price-value--ocean {
-    color: $blue;
-  }
-  &__price-value--mountain {
-    color: $darkPink;
-  }
-  &__price-value--forest {
-    color: $green;
-  }
+
   &__price-desc {
     font-size: 12px;
   }
   &__item-info {
     text-align: center;
-    height: 100%;
   }
   &__item-place {
-    @include size(100%, 38%);
+    @include size(100%, 230px);
     @include flex(column, center, center);
     filter: brightness(0.9);
+    &--ocean {
+      @include placeBgImage("../assets/images/ocean.png", $opacityColor);
+    }
+    &--mountain {
+      @include placeBgImage("../assets/images/mountain.png", $opacityColor);
+    }
+    &--forest {
+      @include placeBgImage("../assets/images/forest.png", unset);
+    }
   }
-  &__item-place--ocean {
-    @include placeBgImage("../assets/images/ocean.png", $opacityColor);
-  }
-  &__item-place--mountain {
-    @include placeBgImage("../assets/images/mountain.png", $opacityColor);
-  }
-  &__item-place--forest {
-    @include placeBgImage("../assets/images/forest.png", unset);
-  }
+
   &__place-desc {
     @include textFont($white, 30px, 200);
     font-family: "Poppins";
@@ -90,10 +91,9 @@
   }
   &__item-desc {
     @include textFont($mediumBlue, unset, 300);
-    height: 45%;
   }
   &__item-title-container {
-    height: 24%;
+    padding: 20px;
     @include flex(column, center, unset);
   }
   &__item-title {
@@ -101,30 +101,31 @@
     padding-bottom: 5px;
   }
   &__item-btn {
-    height: 17%;
     @include flex(unset, center, center);
-  }
-  &__item-ocean-btn {
-    @include button($blue);
-  }
-  &__item-mountain-btn {
-    @include button($purple);
-  }
-  &__item-forest-btn {
-    @include button($green);
+    padding: 40px 0;
+    &--ocean {
+      @include button($blue);
+    }
+    &--mountain {
+      @include button($purple);
+    }
+    &--forest {
+      @include button($green);
+    }
   }
 }
 .place-inf {
   list-style-type: none;
   font-size: 13px;
-  height: 76%;
   @include flex(column, space-between, unset);
-  :nth-child(odd) {
-    background-color: $veryLightBlue;
-  }
+
   &__detail {
     flex: 1;
     @include flex(unset, center, center);
+    padding: 12px;
+    &:nth-child(odd) {
+      background-color: $veryLightBlue;
+    }
   }
 }
 @import "style_responsive";

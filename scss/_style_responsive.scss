@@ -1,13 +1,13 @@
-@media screen and (min-width: 375px) and (max-width: 1440px) {
+@media screen and (max-width: 767px) {
   .main {
     overflow-y: scroll;
-    height: unset;
   }
   .grid {
-    @include size(100%, 80%);
+    width: 100%;
     grid-template-columns: unset;
     grid-template-rows: auto;
     row-gap: 3%;
+    margin: 0;
     &__item {
       &::before {
         transform: translate(0%, 20%);
@@ -30,9 +30,6 @@
     &__place-desc {
       font-size: 40px;
     }
-    &__item-info {
-      height: 94vh;
-    }
     &__item-title {
       font-size: 20px;
     }
@@ -42,5 +39,14 @@
   }
   .place-inf {
     font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1410px) {
+  .grid {
+    width: 86%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin: 10% 0;
   }
 }
