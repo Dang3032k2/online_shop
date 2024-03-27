@@ -1,0 +1,46 @@
+@media screen and (min-width: 375px) and (max-width: 1440px) {
+  .main {
+    overflow-y: scroll;
+    height: unset;
+  }
+  .grid {
+    @include size(100%, 80%);
+    grid-template-columns: unset;
+    grid-template-rows: auto;
+    row-gap: 3%;
+    &__item {
+      &::before {
+        transform: translate(0%, 20%);
+      }
+    }
+    &__item-price {
+      @include size(100%, 6vh);
+      flex-direction: row;
+      position: unset;
+      transform: unset;
+      border-radius: 0;
+    }
+    &__price-value {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    &__price-desc {
+      font-size: 14px;
+    }
+    &__place-desc {
+      font-size: 40px;
+    }
+    &__item-info {
+      height: 94vh;
+    }
+    &__item-title {
+      font-size: 20px;
+    }
+    &__item-note {
+      font-size: 14px;
+    }
+  }
+  .place-inf {
+    font-size: 16px;
+  }
+}
