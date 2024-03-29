@@ -221,7 +221,7 @@ a {
   background-color: #f4f6f7;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .main {
     overflow-y: scroll;
     height: auto;
@@ -231,14 +231,6 @@ a {
     grid-template-rows: auto;
     row-gap: 80px;
     margin: 80px 0 40px 0;
-  }
-  .grid__price-value {
-    margin-right: 10px;
-    margin-bottom: 0;
-    font-size: 24px;
-  }
-  .grid__price-desc {
-    font-size: 14px;
   }
   .grid__place-desc {
     font-size: 40px;
