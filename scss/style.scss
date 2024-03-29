@@ -3,20 +3,18 @@
 @import "mixin";
 
 .main {
-  width: 100%;
   @include size(100%, 110vh);
   @include flex(unset, center, center);
   background-color: $lightCyan;
 }
 .grid {
-  width: 65%;
-  margin: 6%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 5%;
+  column-gap: 50px;
   &__item {
     background-color: $white;
     position: relative;
+    width: 300px;
     &::before {
       content: "NEW";
       @include size(60px, 60px);

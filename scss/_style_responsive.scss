@@ -28,7 +28,6 @@
     height: auto;
   }
   .grid {
-    width: 86%;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
     margin: 10% 0;
@@ -37,10 +36,5 @@
 @media screen and (min-width: 1440px) and (min-height: 848px) {
   .main {
     height: 100vh;
-  }
-}
-@media screen and (max-width: 500px) {
-  .grid {
-    width: 90%;
   }
 }
