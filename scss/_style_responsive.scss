@@ -1,27 +1,16 @@
 @media screen and (max-width: 767px) {
   .main {
     overflow-y: scroll;
+    height: auto;
   }
   .grid {
-    width: 100%;
     grid-template-columns: unset;
     grid-template-rows: auto;
-    row-gap: 3%;
-    margin: 0;
-    &__item {
-      &::before {
-        transform: translate(0%, 20%);
-      }
-    }
-    &__item-price {
-      @include size(100%, 6vh);
-      flex-direction: row;
-      position: unset;
-      transform: unset;
-      border-radius: 0;
-    }
+    row-gap: 80px;
+    margin: 80px 0 40px 0;
     &__price-value {
       margin-right: 10px;
+      margin-bottom: 0;
       font-size: 24px;
     }
     &__price-desc {
@@ -43,10 +32,23 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1410px) {
+  .main {
+    height: auto;
+  }
   .grid {
     width: 86%;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
     margin: 10% 0;
+  }
+}
+@media screen and (min-width: 1440px) and (min-height: 848px) {
+  .main {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .grid {
+    width: 90%;
   }
 }
