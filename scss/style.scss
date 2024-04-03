@@ -3,18 +3,30 @@
 @import "mixin";
 
 .main {
-  @include size(100%, 110vh);
-  @include flex(unset, center, center);
+  @include size(100%, 120vh);
+  @include flex(column, center, center);
   background-color: $lightCyan;
+  position: relative;
+}
+.slider {
+  @include flex(unset, unset, center);
+}
+.grid-container {
+  width: 1060px;
+  overflow-x: clip;
+  margin: 0 40px;
+  position: relative;
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   column-gap: 50px;
-  &__item {
-    background-color: $white;
+  transition: all 0.7s ease;
+  &__item-container {
+    width: 316px;
+    display: flex;
+    justify-content: center;
     position: relative;
-    width: 300px;
     &::before {
       content: "NEW";
       @include size(60px, 60px);
@@ -23,13 +35,20 @@
       background-size: cover;
       position: absolute;
       z-index: 5;
-      transform: translate(-20%, -30%);
+      left: 0;
+      top: -20px;
       @include textFont($white, 12px, none);
       display: none;
     }
     &:nth-child(2)::before {
       display: flex;
     }
+  }
+
+  &__item {
+    background-color: $white;
+    width: 300px;
+    position: relative;
   }
   &__item-price {
     @include size(100px, 100px);
@@ -126,5 +145,44 @@
       background-color: $veryLightBlue;
     }
   }
+}
+.change-item {
+  @include size(40px, 40px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  background-color: $white;
+  position: absolute;
+  z-index: 2;
+  path {
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    path {
+      fill: $blue;
+    }
+  }
+  &--previous {
+    left: 5%;
+  }
+  &--next {
+    right: 5%;
+  }
+}
+.disable {
+  background-color: $darkGray;
+}
+.change-items {
+  width: 50px;
+  margin-top: 50px;
+  @include flex(unset, space-between, unset);
+  cursor: pointer;
+  &__btn {
+    @include size(16px, 16px);
+  }
+}
+
+.selected {
+  fill: $white;
 }
 @import "style_responsive";

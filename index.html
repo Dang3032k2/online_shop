@@ -8,126 +8,334 @@
   </head>
   <body>
     <main class="main">
-      <div class="grid">
-        <div class="grid__item">
-          <div class="grid__item-price">
-            <p class="grid__price-value grid__price-value--ocean">$399</p>
-            <p class="grid__price-desc">Per tour</p>
-          </div>
-          <div class="grid__item-info">
-            <div class="grid__item-place grid__item-place--ocean">
-              <p class="grid__place-desc">OCEAN</p>
-            </div>
-            <div class="grid__item-desc">
-              <div class="grid__item-title-container">
-                <p class="grid__item-title">Subtitle goes here</p>
-                <p class="grid__item-note">
-                  Subtitle second line goes here lorem ipsum *
-                </p>
+      <div class="slider">
+        <div
+          class="change-item change-item--previous"
+          onclick="changeItem('previous',false)"
+          id="previous"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              fill="#000"
+              d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM271 135c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-87 87 87 87c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L167 273c-9.4-9.4-9.4-24.6 0-33.9L271 135z"
+            />
+          </svg>
+        </div>
+        <div class="grid-container" id="grid-container">
+          <div class="grid" id="grid">
+            <div class="grid__item-container">
+              <div class="grid__item">
+                <div class="grid__item-price">
+                  <p class="grid__price-value grid__price-value--ocean">$399</p>
+                  <p class="grid__price-desc">Per tour</p>
+                </div>
+                <div class="grid__item-info">
+                  <div class="grid__item-place grid__item-place--ocean">
+                    <p class="grid__place-desc">OCEAN</p>
+                  </div>
+                  <div class="grid__item-desc">
+                    <div class="grid__item-title-container">
+                      <p class="grid__item-title">Subtitle goes here</p>
+                      <p class="grid__item-note">
+                        Subtitle second line goes here lorem ipsum *
+                      </p>
+                    </div>
+                    <ul class="place-inf">
+                      <li class="place-inf__detail">
+                        <a href="#"> Drop out ramen hustle </a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#"> Coworking viral landing </a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#"> Crush revenue traction </a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#"> User base minimum viable </a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#"> Lorem ipsum dolor </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="grid__item-btn">
+                    <button class="grid__item-btn--ocean">BUY TOUR</button>
+                  </div>
+                </div>
               </div>
-              <ul class="place-inf">
-                <li class="place-inf__detail">
-                  <a href="#"> Drop out ramen hustle </a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#"> Coworking viral landing </a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#"> Crush revenue traction </a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#"> User base minimum viable </a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#"> Lorem ipsum dolor </a>
-                </li>
-              </ul>
             </div>
-            <div class="grid__item-btn">
-              <button class="grid__item-btn--ocean">BUY TOUR</button>
+            <div class="grid__item-container">
+              <div class="grid__item">
+                <div class="grid__item-price grid__item-price--mountain">
+                  <p class="grid__price-value grid__price-value--mountain">
+                    $499
+                  </p>
+                  <p class="grid__price-desc">Per tour</p>
+                </div>
+                <div class="grid__item-info">
+                  <div class="grid__item-place grid__item-place--mountain">
+                    <p class="grid__place-desc">MOUNTAINS</p>
+                    <p class="grid__item-note">
+                      The best price/quantity plan *
+                    </p>
+                  </div>
+                  <div class="grid__item-desc">
+                    <div class="grid__item-title-container">
+                      <p class="grid__item-title">Subtitle goes here</p>
+                      <p class="grid__item-note">
+                        Subtitle second line goes here lorem ipsum *
+                      </p>
+                    </div>
+                    <ul class="place-inf">
+                      <li class="place-inf__detail">
+                        <a href="#">Drop out ramen hustle</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Coworking viral landing</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Crush revenue traction</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">User base minimum viable</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Lorem ipsum dolor</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="grid__item-btn">
+                    <button class="grid__item-btn--mountain">BUY TOUR</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item-container">
+              <div class="grid__item">
+                <div class="grid__item-price">
+                  <p class="grid__price-value grid__price-value--forest">
+                    $599
+                  </p>
+                  <p class="grid__price-desc">Per tour</p>
+                </div>
+                <div class="grid__item-info">
+                  <div class="grid__item-place grid__item-place--forest">
+                    <p class="grid__place-desc">FOREST</p>
+                  </div>
+                  <div class="grid__item-desc">
+                    <div class="grid__item-title-container">
+                      <p class="grid__item-title">Subtitle goes here</p>
+                      <p class="grid__item-note">
+                        Subtitle second line goes here lorem ipsum *
+                      </p>
+                    </div>
+                    <ul class="place-inf">
+                      <li class="place-inf__detail">
+                        <a href="#">Drop out ramen hustle</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Coworking viral landing</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Crush revenue traction</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">User base minimum viable</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Lorem ipsum dolor</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="grid__item-btn">
+                    <button class="grid__item-btn--forest">BUY TOUR</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid__item-container">
+              <div class="grid__item">
+                <div class="grid__item-price">
+                  <p class="grid__price-value grid__price-value--ocean">$399</p>
+                  <p class="grid__price-desc">Per tour</p>
+                </div>
+                <div class="grid__item-info">
+                  <div class="grid__item-place grid__item-place--ocean">
+                    <p class="grid__place-desc">OCEAN</p>
+                  </div>
+                  <div class="grid__item-desc">
+                    <div class="grid__item-title-container">
+                      <p class="grid__item-title">Subtitle goes here</p>
+                      <p class="grid__item-note">
+                        Subtitle second line goes here lorem ipsum *
+                      </p>
+                    </div>
+                    <ul class="place-inf">
+                      <li class="place-inf__detail">
+                        <a href="#"> Drop out ramen hustle </a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#"> Coworking viral landing </a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#"> Crush revenue traction </a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#"> User base minimum viable </a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#"> Lorem ipsum dolor </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="grid__item-btn">
+                    <button class="grid__item-btn--ocean">BUY TOUR</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid__item-container">
+              <div class="grid__item">
+                <div class="grid__item-price grid__item-price--mountain">
+                  <p class="grid__price-value grid__price-value--mountain">
+                    $499
+                  </p>
+                  <p class="grid__price-desc">Per tour</p>
+                </div>
+                <div class="grid__item-info">
+                  <div class="grid__item-place grid__item-place--mountain">
+                    <p class="grid__place-desc">MOUNTAINS</p>
+                    <p class="grid__item-note">
+                      The best price/quantity plan *
+                    </p>
+                  </div>
+                  <div class="grid__item-desc">
+                    <div class="grid__item-title-container">
+                      <p class="grid__item-title">Subtitle goes here</p>
+                      <p class="grid__item-note">
+                        Subtitle second line goes here lorem ipsum *
+                      </p>
+                    </div>
+                    <ul class="place-inf">
+                      <li class="place-inf__detail">
+                        <a href="#">Drop out ramen hustle</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Coworking viral landing</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Crush revenue traction</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">User base minimum viable</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Lorem ipsum dolor</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="grid__item-btn">
+                    <button class="grid__item-btn--mountain">BUY TOUR</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid__item-container">
+              <div class="grid__item">
+                <div class="grid__item-price">
+                  <p class="grid__price-value grid__price-value--forest">
+                    $599
+                  </p>
+                  <p class="grid__price-desc">Per tour</p>
+                </div>
+                <div class="grid__item-info">
+                  <div class="grid__item-place grid__item-place--forest">
+                    <p class="grid__place-desc">FOREST</p>
+                  </div>
+                  <div class="grid__item-desc">
+                    <div class="grid__item-title-container">
+                      <p class="grid__item-title">Subtitle goes here</p>
+                      <p class="grid__item-note">
+                        Subtitle second line goes here lorem ipsum *
+                      </p>
+                    </div>
+                    <ul class="place-inf">
+                      <li class="place-inf__detail">
+                        <a href="#">Drop out ramen hustle</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Coworking viral landing</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Crush revenue traction</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">User base minimum viable</a>
+                      </li>
+                      <li class="place-inf__detail">
+                        <a href="#">Lorem ipsum dolor</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="grid__item-btn">
+                    <button class="grid__item-btn--forest">BUY TOUR</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="grid__item">
-          <div class="grid__item-price grid__item-price--mountain">
-            <p class="grid__price-value grid__price-value--mountain">$499</p>
-            <p class="grid__price-desc">Per tour</p>
-          </div>
-          <div class="grid__item-info">
-            <div class="grid__item-place grid__item-place--mountain">
-              <p class="grid__place-desc">MOUNTAINS</p>
-              <p class="grid__item-note">The best price/quantity plan *</p>
-            </div>
-            <div class="grid__item-desc">
-              <div class="grid__item-title-container">
-                <p class="grid__item-title">Subtitle goes here</p>
-                <p class="grid__item-note">
-                  Subtitle second line goes here lorem ipsum *
-                </p>
-              </div>
-              <ul class="place-inf">
-                <li class="place-inf__detail">
-                  <a href="#">Drop out ramen hustle</a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#">Coworking viral landing</a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#">Crush revenue traction</a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#">User base minimum viable</a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#">Lorem ipsum dolor</a>
-                </li>
-              </ul>
-            </div>
-            <div class="grid__item-btn">
-              <button class="grid__item-btn--mountain">BUY TOUR</button>
-            </div>
-          </div>
+
+        <div
+          class="change-item change-item--next"
+          onclick="changeItem('next',false)"
+          id="next"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              fill="#000"
+              d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+            />
+          </svg>
         </div>
-        <div class="grid__item">
-          <div class="grid__item-price">
-            <p class="grid__price-value grid__price-value--forest">$599</p>
-            <p class="grid__price-desc">Per tour</p>
-          </div>
-          <div class="grid__item-info">
-            <div class="grid__item-place grid__item-place--forest">
-              <p class="grid__place-desc">FOREST</p>
-            </div>
-            <div class="grid__item-desc">
-              <div class="grid__item-title-container">
-                <p class="grid__item-title">Subtitle goes here</p>
-                <p class="grid__item-note">
-                  Subtitle second line goes here lorem ipsum *
-                </p>
-              </div>
-              <ul class="place-inf">
-                <li class="place-inf__detail">
-                  <a href="#">Drop out ramen hustle</a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#">Coworking viral landing</a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#">Crush revenue traction</a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#">User base minimum viable</a>
-                </li>
-                <li class="place-inf__detail">
-                  <a href="#">Lorem ipsum dolor</a>
-                </li>
-              </ul>
-            </div>
-            <div class="grid__item-btn">
-              <button class="grid__item-btn--forest">BUY TOUR</button>
-            </div>
-          </div>
+      </div>
+
+      <div class="change-items">
+        <div class="change-items__btn" onclick="changeItem('first-page')">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              id="first-page-btn"
+              class="selected"
+              fill="#99a9b5"
+              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
+            />
+          </svg>
+        </div>
+
+        <div class="change-items__btn" onclick="changeItem('second-page')">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              id="second-page-btn"
+              fill="#99a9b5"
+              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
+            />
+          </svg>
+        </div>
+        <div class="change-items__btn" onclick="changeItem('last-page')">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              id="last-page-btn"
+              fill="#99a9b5"
+              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
+            />
+          </svg>
         </div>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
