@@ -9,13 +9,8 @@
   <body>
     <main class="main">
       <div class="slider">
-        <div
-          class="change-item change-item--previous"
-          onclick="changeItem('previous',false)"
-          id="previous"
-        >
+        <div class="change-item change-item--previous" id="previous">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
             <path
               fill="#000"
               d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM271 135c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-87 87 87 87c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L167 273c-9.4-9.4-9.4-24.6 0-33.9L271 135z"
@@ -290,11 +285,7 @@
           </div>
         </div>
 
-        <div
-          class="change-item change-item--next"
-          onclick="changeItem('next',false)"
-          id="next"
-        >
+        <div class="change-item change-item--next" id="next">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path
               fill="#000"
@@ -304,31 +295,29 @@
         </div>
       </div>
 
-      <div class="change-items">
-        <div class="change-items__btn" onclick="changeItem('first-page')">
+      <div class="change-items" id="dots">
+        <div class="change-items__btn" id="page1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path
-              id="first-page-btn"
-              class="selected"
+              class="selected dot"
               fill="#99a9b5"
               d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
             />
           </svg>
         </div>
-
-        <div class="change-items__btn" onclick="changeItem('second-page')">
+        <div class="change-items__btn" id="page2">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path
-              id="second-page-btn"
+              class="dot"
               fill="#99a9b5"
               d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
             />
           </svg>
         </div>
-        <div class="change-items__btn" onclick="changeItem('last-page')">
+        <div class="change-items__btn" id="page3">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path
-              id="last-page-btn"
+              class="dot"
               fill="#99a9b5"
               d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
             />
