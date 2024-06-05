@@ -1,0 +1,43 @@
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin itemPrice($bgColor) {
+  background-color: $bgColor;
+  color: $lightBlue;
+}
+@mixin placeBgImage($url, $bgColor) {
+  background-image: url($url);
+  background-size: cover;
+  background-color: $bgColor;
+  background-blend-mode: multiply;
+}
+@mixin button($color) {
+  padding: 10px 20px;
+  height: 40px;
+  font-size: 16px;
+  background-color: transparent;
+  letter-spacing: 4px;
+  border: 1px solid $color;
+  color: $color;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    color: $white;
+    background-color: $color;
+  }
+}
+@mixin flex($direction, $justifyContent, $alignItems) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+@mixin textFont($color, $fontSize, $fontWeight) {
+  color: $color;
+  font: {
+    size: $fontSize;
+    weight: $fontWeight;
+  }
+}

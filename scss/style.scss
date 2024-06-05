@@ -1,0 +1,185 @@
+@import "reset";
+@import "color";
+@import "mixin";
+
+.main {
+  @include size(100%, 120vh);
+  @include flex(column, center, center);
+  background-color: $lightCyan;
+  position: relative;
+}
+.slider {
+  @include flex(unset, unset, center);
+}
+.grid-container {
+  width: 1060px;
+  overflow-x: clip;
+  margin: 0 40px;
+  position: relative;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 50px;
+  transition: all 0.7s ease;
+  &__item-container {
+    width: 316px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &::before {
+      content: "NEW";
+      @include size(60px, 60px);
+      @include flex(row, center, center);
+      background-image: url("../assets/images/newmark.png");
+      background-size: cover;
+      position: absolute;
+      z-index: 5;
+      left: 0;
+      top: -20px;
+      @include textFont($white, 12px, none);
+      display: none;
+    }
+    &:nth-child(2)::before {
+      display: flex;
+    }
+  }
+
+  &__item {
+    background-color: $white;
+    width: 300px;
+    position: relative;
+  }
+  &__item-price {
+    @include size(100px, 100px);
+    @include itemPrice($white);
+    @include flex(column, center, center);
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    font-weight: 300;
+  }
+  &__item-price--mountain {
+    background-color: $black;
+  }
+  &__price-value {
+    font-size: 22px;
+    margin-bottom: 6px;
+    &--ocean {
+      color: $blue;
+    }
+    &--mountain {
+      color: $darkPink;
+    }
+    &--forest {
+      color: $green;
+    }
+  }
+
+  &__price-desc {
+    font-size: 12px;
+  }
+  &__item-info {
+    text-align: center;
+  }
+  &__item-place {
+    @include size(100%, 230px);
+    @include flex(column, center, center);
+    filter: brightness(0.9);
+    &--ocean {
+      @include placeBgImage("../assets/images/ocean.png", $opacityColor);
+    }
+    &--mountain {
+      @include placeBgImage("../assets/images/mountain.png", $opacityColor);
+    }
+    &--forest {
+      @include placeBgImage("../assets/images/forest.png", unset);
+    }
+  }
+
+  &__place-desc {
+    @include textFont($white, 30px, 200);
+    font-family: "Poppins";
+    letter-spacing: 4px;
+  }
+  &__item-note {
+    @include textFont($lightBlue, 12px, 300);
+  }
+  &__item-desc {
+    @include textFont($mediumBlue, unset, 300);
+  }
+  &__item-title-container {
+    padding: 20px;
+    @include flex(column, center, unset);
+  }
+  &__item-title {
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+  &__item-btn {
+    @include flex(unset, center, center);
+    padding: 40px 0;
+    &--ocean {
+      @include button($blue);
+    }
+    &--mountain {
+      @include button($purple);
+    }
+    &--forest {
+      @include button($green);
+    }
+  }
+}
+.place-inf {
+  list-style-type: none;
+  font-size: 13px;
+  @include flex(column, space-between, unset);
+
+  &__detail {
+    flex: 1;
+    @include flex(unset, center, center);
+    padding: 12px;
+    &:nth-child(odd) {
+      background-color: $veryLightBlue;
+    }
+  }
+}
+.change-item {
+  @include size(40px, 40px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  background-color: $white;
+  position: absolute;
+  z-index: 2;
+  path {
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    path {
+      fill: $blue;
+    }
+  }
+  &--previous {
+    left: 5%;
+  }
+  &--next {
+    right: 5%;
+  }
+}
+.change-items {
+  width: 50px;
+  margin-top: 50px;
+  @include flex(unset, space-between, unset);
+  cursor: pointer;
+  &__btn {
+    @include size(16px, 16px);
+  }
+}
+
+.selected {
+  fill: $white;
+}
+@import "style_responsive";
